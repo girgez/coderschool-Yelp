@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00CC8E301DB60CAE00FED21D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CC8E2F1DB60CAE00FED21D /* AppDelegate.swift */; };
+		00CC8E351DB60CAE00FED21D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00CC8E331DB60CAE00FED21D /* Main.storyboard */; };
+		00CC8E371DB60CAE00FED21D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00CC8E361DB60CAE00FED21D /* Assets.xcassets */; };
+		00CC8E3A1DB60CAE00FED21D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00CC8E381DB60CAE00FED21D /* LaunchScreen.storyboard */; };
+		00CC8E481DB61AA800FED21D /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CC8E471DB61AA800FED21D /* Share.swift */; };
+		00CC8E4A1DB61FDC00FED21D /* BusinessesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CC8E491DB61FDC00FED21D /* BusinessesViewController.swift */; };
+		00CC8E4E1DB6200C00FED21D /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CC8E4D1DB6200C00FED21D /* Business.swift */; };
+		00CC8E511DB6208D00FED21D /* Net.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CC8E501DB6208D00FED21D /* Net.swift */; };
+		00CC8E531DB6250F00FED21D /* YelpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CC8E521DB6250F00FED21D /* YelpClient.swift */; };
+		00F33C301DB67AA700DCD30F /* BusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F33C2F1DB67AA700DCD30F /* BusinessCell.swift */; };
+		249360561899CE708FCCA92C /* Pods_Yelp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EA68144D3ECEAD0625449BE /* Pods_Yelp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		00CC8E2C1DB60CAE00FED21D /* Yelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		00CC8E2F1DB60CAE00FED21D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		00CC8E341DB60CAE00FED21D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		00CC8E361DB60CAE00FED21D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		00CC8E391DB60CAE00FED21D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		00CC8E3B1DB60CAE00FED21D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00CC8E471DB61AA800FED21D /* Share.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Share.swift; path = Common/Share.swift; sourceTree = "<group>"; };
+		00CC8E491DB61FDC00FED21D /* BusinessesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BusinessesViewController.swift; path = "View Controllers/BusinessesViewController.swift"; sourceTree = "<group>"; };
+		00CC8E4D1DB6200C00FED21D /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Business.swift; path = Models/Business.swift; sourceTree = "<group>"; };
+		00CC8E501DB6208D00FED21D /* Net.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Net.swift; path = Net/Net.swift; sourceTree = "<group>"; };
+		00CC8E521DB6250F00FED21D /* YelpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YelpClient.swift; path = API/YelpClient.swift; sourceTree = "<group>"; };
+		00F33C2F1DB67AA700DCD30F /* BusinessCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BusinessCell.swift; path = View/BusinessCell.swift; sourceTree = "<group>"; };
+		8EA68144D3ECEAD0625449BE /* Pods_Yelp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yelp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAA5314708A295CC794B14C6 /* Pods-Yelp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yelp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yelp/Pods-Yelp.debug.xcconfig"; sourceTree = "<group>"; };
+		AEEF7254321DF789468C5D36 /* Pods-Yelp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yelp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yelp/Pods-Yelp.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00CC8E291DB60CAE00FED21D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				249360561899CE708FCCA92C /* Pods_Yelp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00CC8E231DB60CAE00FED21D = {
+			isa = PBXGroup;
+			children = (
+				00CC8E2E1DB60CAE00FED21D /* Yelp */,
+				00CC8E2D1DB60CAE00FED21D /* Products */,
+				A6144E2572ECEBC79224D662 /* Pods */,
+				C646D9B98CF71ADA9C16AC51 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		00CC8E2D1DB60CAE00FED21D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00CC8E2C1DB60CAE00FED21D /* Yelp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00CC8E2E1DB60CAE00FED21D /* Yelp */ = {
+			isa = PBXGroup;
+			children = (
+				00CC8E411DB619FA00FED21D /* API */,
+				00CC8E4F1DB6208100FED21D /* Net */,
+				00CC8E441DB61A4F00FED21D /* Common */,
+				00CC8E421DB61A0600FED21D /* Models */,
+				00F33C2E1DB6755600DCD30F /* View */,
+				00CC8E431DB61A3000FED21D /* View Controllers */,
+				00CC8E2F1DB60CAE00FED21D /* AppDelegate.swift */,
+				00CC8E331DB60CAE00FED21D /* Main.storyboard */,
+				00CC8E361DB60CAE00FED21D /* Assets.xcassets */,
+				00CC8E381DB60CAE00FED21D /* LaunchScreen.storyboard */,
+				00CC8E3B1DB60CAE00FED21D /* Info.plist */,
+			);
+			path = Yelp;
+			sourceTree = "<group>";
+		};
+		00CC8E411DB619FA00FED21D /* API */ = {
+			isa = PBXGroup;
+			children = (
+				00CC8E521DB6250F00FED21D /* YelpClient.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		00CC8E421DB61A0600FED21D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				00CC8E4D1DB6200C00FED21D /* Business.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		00CC8E431DB61A3000FED21D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				00CC8E491DB61FDC00FED21D /* BusinessesViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		00CC8E441DB61A4F00FED21D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				00CC8E471DB61AA800FED21D /* Share.swift */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		00CC8E4F1DB6208100FED21D /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				00CC8E501DB6208D00FED21D /* Net.swift */,
+			);
+			name = Net;
+			sourceTree = "<group>";
+		};
+		00F33C2E1DB6755600DCD30F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				00F33C2F1DB67AA700DCD30F /* BusinessCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A6144E2572ECEBC79224D662 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AAA5314708A295CC794B14C6 /* Pods-Yelp.debug.xcconfig */,
+				AEEF7254321DF789468C5D36 /* Pods-Yelp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C646D9B98CF71ADA9C16AC51 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8EA68144D3ECEAD0625449BE /* Pods_Yelp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00CC8E2B1DB60CAE00FED21D /* Yelp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00CC8E3E1DB60CAE00FED21D /* Build configuration list for PBXNativeTarget "Yelp" */;
+			buildPhases = (
+				4FCDB6E198726F501EF91AE7 /* [CP] Check Pods Manifest.lock */,
+				00CC8E281DB60CAE00FED21D /* Sources */,
+				00CC8E291DB60CAE00FED21D /* Frameworks */,
+				00CC8E2A1DB60CAE00FED21D /* Resources */,
+				F948D56F395359C4F7FDDBF7 /* [CP] Embed Pods Frameworks */,
+				6BD8A16DA90DA2100971ACF1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Yelp;
+			productName = Yelp;
+			productReference = 00CC8E2C1DB60CAE00FED21D /* Yelp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		00CC8E241DB60CAE00FED21D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Girge;
+				TargetAttributes = {
+					00CC8E2B1DB60CAE00FED21D = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = TW9QQRUDNE;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 00CC8E271DB60CAE00FED21D /* Build configuration list for PBXProject "Yelp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 00CC8E231DB60CAE00FED21D;
+			productRefGroup = 00CC8E2D1DB60CAE00FED21D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				00CC8E2B1DB60CAE00FED21D /* Yelp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00CC8E2A1DB60CAE00FED21D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00CC8E3A1DB60CAE00FED21D /* LaunchScreen.storyboard in Resources */,
+				00CC8E371DB60CAE00FED21D /* Assets.xcassets in Resources */,
+				00CC8E351DB60CAE00FED21D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4FCDB6E198726F501EF91AE7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6BD8A16DA90DA2100971ACF1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Yelp/Pods-Yelp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F948D56F395359C4F7FDDBF7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Yelp/Pods-Yelp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00CC8E281DB60CAE00FED21D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00F33C301DB67AA700DCD30F /* BusinessCell.swift in Sources */,
+				00CC8E301DB60CAE00FED21D /* AppDelegate.swift in Sources */,
+				00CC8E511DB6208D00FED21D /* Net.swift in Sources */,
+				00CC8E4E1DB6200C00FED21D /* Business.swift in Sources */,
+				00CC8E481DB61AA800FED21D /* Share.swift in Sources */,
+				00CC8E531DB6250F00FED21D /* YelpClient.swift in Sources */,
+				00CC8E4A1DB61FDC00FED21D /* BusinessesViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		00CC8E331DB60CAE00FED21D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				00CC8E341DB60CAE00FED21D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		00CC8E381DB60CAE00FED21D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				00CC8E391DB60CAE00FED21D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		00CC8E3C1DB60CAE00FED21D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		00CC8E3D1DB60CAE00FED21D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		00CC8E3F1DB60CAE00FED21D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAA5314708A295CC794B14C6 /* Pods-Yelp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TW9QQRUDNE;
+				INFOPLIST_FILE = Yelp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Girge.Yelp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		00CC8E401DB60CAE00FED21D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEEF7254321DF789468C5D36 /* Pods-Yelp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TW9QQRUDNE;
+				INFOPLIST_FILE = Yelp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Girge.Yelp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00CC8E271DB60CAE00FED21D /* Build configuration list for PBXProject "Yelp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00CC8E3C1DB60CAE00FED21D /* Debug */,
+				00CC8E3D1DB60CAE00FED21D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00CC8E3E1DB60CAE00FED21D /* Build configuration list for PBXNativeTarget "Yelp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00CC8E3F1DB60CAE00FED21D /* Debug */,
+				00CC8E401DB60CAE00FED21D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00CC8E241DB60CAE00FED21D /* Project object */;
+}
