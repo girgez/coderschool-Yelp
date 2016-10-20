@@ -41,16 +41,25 @@ class YelpClient: BDBOAuth1RequestOperationManager {
     }
     
     @discardableResult
-    func search(with term: String, completion: @escaping ([Business]?, Error?) -> Void) -> AFHTTPRequestOperation {
-        return search(with: term, sort: nil, categories: nil, deals: nil, completion: completion)
+    func search(with parameters: SearchParameters, completion: @escaping ([Business]?, Error?) -> Void) -> AFHTTPRequestOperation {
+        return search(with: parameters.term, sort: parameters.sortMode, categories: parameters.categories, deals: parameters.deals, completion: completion)
     }
     
+//    @discardableResult
+//    func search(with term: String, completion: @escaping ([Business]?, Error?) -> Void) -> AFHTTPRequestOperation {
+//        return search(with: term, sort: nil, categories: nil, deals: nil, completion: completion)
+//    }
+    
     @discardableResult
-    func search(with term: String, sort: YelpSortMode?, categories: [String]?, deals: Bool?, completion: @escaping ([Business]?, Error?) -> Void) -> AFHTTPRequestOperation {
+    func search(with term: String?, sort: YelpSortMode?, categories: [String]?, deals: Bool?, completion: @escaping ([Business]?, Error?) -> Void) -> AFHTTPRequestOperation {
         // For additional parameters, see http://www.yelp.com/developers/documentation/v2/search_api
         
         // Default the location to San Francisco
-        var parameters: [String : AnyObject] = ["term": term as AnyObject, "ll": "37.785771,-122.406165" as AnyObject]
+        var parameters: [String : AnyObject] = ["ll": "37.785771,-122.406165" as AnyObject]
+        
+        if term != nil {
+            parameters["term"] = term! as AnyObject
+        }
         
         if sort != nil {
             parameters["sort"] = sort!.rawValue as AnyObject?
@@ -64,7 +73,7 @@ class YelpClient: BDBOAuth1RequestOperationManager {
             parameters["deals_filter"] = deals! as AnyObject?
         }
         
-        print(parameters)
+        print("para \(parameters)")
         
         return self.get("search", parameters: parameters, success: { (operation: AFHTTPRequestOperation, response: Any) in
             if let response = response as? NSDictionary {

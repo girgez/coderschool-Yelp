@@ -20,7 +20,7 @@ class BusinessCell: UITableViewCell {
     
     var business: Business! {
         didSet {
-            thumbImageView.setImageWith((business.imageURL)!)
+            thumbImageView.setImageWith((business.imageURL)!, placeholderImage: #imageLiteral(resourceName: "thumbImage"))
             nameLabel.text = business.name
             distanceLabel.text = business.distance
             ratingImageView.setImageWith((business.ratingImageURL)!)
@@ -32,6 +32,9 @@ class BusinessCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        thumbImageView.layer.cornerRadius = 10
+        thumbImageView.clipsToBounds = true
         
         // Initialization code
     }
