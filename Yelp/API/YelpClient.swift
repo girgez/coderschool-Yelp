@@ -42,7 +42,7 @@ class YelpClient: BDBOAuth1RequestOperationManager {
     
     @discardableResult
     func search(with parameters: SearchParameters, completion: @escaping ([Business]?, Error?) -> Void) -> AFHTTPRequestOperation {
-        return search(with: parameters.term, sort: parameters.sortMode, categories: parameters.categories, deals: parameters.deals, completion: completion)
+        return search(with: parameters.term, sort: parameters.sortMode, categories: parameters.categories, deals: parameters.deals, distance: parameters.distance, completion: completion)
     }
     
 //    @discardableResult
@@ -51,7 +51,7 @@ class YelpClient: BDBOAuth1RequestOperationManager {
 //    }
     
     @discardableResult
-    func search(with term: String?, sort: YelpSortMode?, categories: [String]?, deals: Bool?, completion: @escaping ([Business]?, Error?) -> Void) -> AFHTTPRequestOperation {
+    func search(with term: String?, sort: YelpSortMode?, categories: [String]?, deals: Bool?, distance: String?, completion: @escaping ([Business]?, Error?) -> Void) -> AFHTTPRequestOperation {
         // For additional parameters, see http://www.yelp.com/developers/documentation/v2/search_api
         
         // Default the location to San Francisco
@@ -61,16 +61,20 @@ class YelpClient: BDBOAuth1RequestOperationManager {
             parameters["term"] = term! as AnyObject
         }
         
-        if sort != nil {
+        if sort != YelpSortMode.bestMatched {
             parameters["sort"] = sort!.rawValue as AnyObject?
         }
         
-        if categories != nil && categories!.count > 0 {
+        if categories!.count > 0 {
             parameters["category_filter"] = (categories!).joined(separator: ",") as AnyObject?
         }
         
         if deals != nil {
             parameters["deals_filter"] = deals! as AnyObject?
+        }
+        
+        if distance != nil && distance != "Auto" {
+            parameters["radius_filter"] = distance!.components(separatedBy: " ")[0] as AnyObject?
         }
         
         print("para \(parameters)")

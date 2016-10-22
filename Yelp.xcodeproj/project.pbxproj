@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0004BDE31DB8F78A00615E73 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0004BDE21DB8F78A00615E73 /* FilterViewController.swift */; };
+		0004BDE51DB8F90D00615E73 /* SwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0004BDE41DB8F90D00615E73 /* SwitchCell.swift */; };
+		0004BDE71DB9010800615E73 /* CheckCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0004BDE61DB9010800615E73 /* CheckCell.swift */; };
+		00B2C8091DBBB01C00938720 /* ExtendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2C8081DBBB01C00938720 /* ExtendCell.swift */; };
+		00B2C80B1DBBD42700938720 /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B2C80A1DBBD42700938720 /* LabelCell.swift */; };
 		00CC8E301DB60CAE00FED21D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CC8E2F1DB60CAE00FED21D /* AppDelegate.swift */; };
 		00CC8E351DB60CAE00FED21D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00CC8E331DB60CAE00FED21D /* Main.storyboard */; };
 		00CC8E371DB60CAE00FED21D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00CC8E361DB60CAE00FED21D /* Assets.xcassets */; };
@@ -22,6 +27,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0004BDE21DB8F78A00615E73 /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilterViewController.swift; path = "View Controllers/FilterViewController.swift"; sourceTree = "<group>"; };
+		0004BDE41DB8F90D00615E73 /* SwitchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwitchCell.swift; path = View/SwitchCell.swift; sourceTree = "<group>"; };
+		0004BDE61DB9010800615E73 /* CheckCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckCell.swift; path = View/CheckCell.swift; sourceTree = "<group>"; };
+		00B2C8081DBBB01C00938720 /* ExtendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExtendCell.swift; path = View/ExtendCell.swift; sourceTree = "<group>"; };
+		00B2C80A1DBBD42700938720 /* LabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LabelCell.swift; path = View/LabelCell.swift; sourceTree = "<group>"; };
 		00CC8E2C1DB60CAE00FED21D /* Yelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00CC8E2F1DB60CAE00FED21D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00CC8E341DB60CAE00FED21D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -109,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				00CC8E491DB61FDC00FED21D /* BusinessesViewController.swift */,
+				0004BDE21DB8F78A00615E73 /* FilterViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -133,6 +144,10 @@
 			isa = PBXGroup;
 			children = (
 				00F33C2F1DB67AA700DCD30F /* BusinessCell.swift */,
+				0004BDE41DB8F90D00615E73 /* SwitchCell.swift */,
+				0004BDE61DB9010800615E73 /* CheckCell.swift */,
+				00B2C8081DBBB01C00938720 /* ExtendCell.swift */,
+				00B2C80A1DBBD42700938720 /* LabelCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -281,11 +296,16 @@
 				00F33C301DB67AA700DCD30F /* BusinessCell.swift in Sources */,
 				00CC8E301DB60CAE00FED21D /* AppDelegate.swift in Sources */,
 				00CC8E511DB6208D00FED21D /* Net.swift in Sources */,
+				0004BDE31DB8F78A00615E73 /* FilterViewController.swift in Sources */,
+				00B2C80B1DBBD42700938720 /* LabelCell.swift in Sources */,
 				00D554961DB8BD6D00F245F6 /* SearchParameters.swift in Sources */,
 				00CC8E4E1DB6200C00FED21D /* Business.swift in Sources */,
 				00CC8E481DB61AA800FED21D /* Share.swift in Sources */,
+				00B2C8091DBBB01C00938720 /* ExtendCell.swift in Sources */,
+				0004BDE71DB9010800615E73 /* CheckCell.swift in Sources */,
 				00CC8E531DB6250F00FED21D /* YelpClient.swift in Sources */,
 				00CC8E4A1DB61FDC00FED21D /* BusinessesViewController.swift in Sources */,
+				0004BDE51DB8F90D00615E73 /* SwitchCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

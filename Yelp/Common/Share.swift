@@ -18,6 +18,17 @@ class Constant {
     static let YELP_CONSUMERSECRET = "33QCvh5bIF5jIHR5klQr7RtBDhQ"
     static let YELP_TOKEN = "uRcRswHFYa1VkDrGV6LAW2F8clGh5JHV"
     static let YELP_TOKENSECRET = "mqtKIxMIR4iBtBPZCmCLEb-Dz3Y"
+    
+    static let distance = ["Auto","0.3 miles", "1 miles", "5 miles", "20 miles"]
+    static let sortMode = ["Best matched", "Distance", "Highest rated"]
+    static let categories = [["name" : "Thai", "code": "thai"],
+                             ["name" : "Vietnamese", "code": "vietnamese"],
+                             ["name" : "Japanese", "code": "japanese"],
+                             ["name" : "Italian", "code": "italian"],
+                             ["name" : "German", "code": "german"],
+                             ["name" : "French", "code": "french"],
+                             ["name" : "Fish & Chips", "code": "fishnchips"],
+                             ["name" : "Fast Food", "code": "hotdogs"]]
 }
 
 
