@@ -74,7 +74,8 @@ class YelpClient: BDBOAuth1RequestOperationManager {
         }
         
         if distance != nil && distance != "Auto" {
-            parameters["radius_filter"] = distance!.components(separatedBy: " ")[0] as AnyObject?
+            let temp =  Double(distance!.components(separatedBy: " ")[0])
+            parameters["radius_filter"] = temp!/0.000621371 as AnyObject?
         }
         
         if offset > 0 {

@@ -23,7 +23,6 @@ class BusinessesViewController: UIViewController {
         searchBar.delegate = self
         searchBar.sizeToFit()
         searchBar.placeholder = "Search business"
-        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         navigationItem.titleView = searchBar
         
         tableView.rowHeight = UITableViewAutomaticDimension

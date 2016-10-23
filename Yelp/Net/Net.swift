@@ -24,7 +24,5 @@ class Net {
     }
     
     func request() {
-        
-        
     }
 }
