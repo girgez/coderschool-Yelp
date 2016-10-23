@@ -41,10 +41,10 @@ class BusinessesViewController: UIViewController {
     }
     
     func loadMore() {
-        searchParameters.offset += 20
         Business.search(with: searchParameters) { (businesses, error) in
-            if businesses != nil {
+            if businesses != nil && businesses!.count > 0 {
                 self.businesses! += businesses!
+                self.searchParameters.offset += 20
             }
             self.isLoadingMore = false
             self.loadingMoreView!.stopAnimating()
@@ -58,6 +58,10 @@ class BusinessesViewController: UIViewController {
         Business.search(with: searchParameters) { (businesses, error) in
             self.businesses = businesses
             self.tableView.reloadData()
+            if self.tableView.numberOfRows(inSection: 0) > 0 {
+                self.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .bottom, animated: false)
+            }
+            self.searchParameters.offset = 20
             ProgressHUD.dismiss()
         }
     }
