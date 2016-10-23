@@ -14,6 +14,7 @@ class SearchParameters {
     var categories = [String]()
     var deals: Bool?
     var distance = "Auto"
+    var offset = 0
     
     init() {
     }

@@ -13,6 +13,8 @@ class BusinessesViewController: UIViewController {
     
     var businesses: [Business]?
     var searchParameters = SearchParameters()
+    var isLoadingMore = false
+    var loadingMoreView:InfiniteScrollActivityView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,14 +28,38 @@ class BusinessesViewController: UIViewController {
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 100
-
+        
+        let frame = CGRect(x: 0, y: tableView.contentSize.height, width: tableView.bounds.size.width, height: InfiniteScrollActivityView.defaultHeight)
+        loadingMoreView = InfiniteScrollActivityView(frame: frame)
+        loadingMoreView!.isHidden = true
+        tableView.addSubview(loadingMoreView!)
+        
+        var insets = tableView.contentInset;
+        insets.bottom += InfiniteScrollActivityView.defaultHeight;
+        tableView.contentInset = insets
+        
         search()
     }
     
+    func loadMore() {
+        searchParameters.offset += 20
+        Business.search(with: searchParameters) { (businesses, error) in
+            if businesses != nil {
+                self.businesses! += businesses!
+            }
+            self.isLoadingMore = false
+            self.loadingMoreView!.stopAnimating()
+            self.tableView.reloadData()
+        }
+    }
+    
     func search() {
+        ProgressHUD.show()
+        searchParameters.offset = 0
         Business.search(with: searchParameters) { (businesses, error) in
             self.businesses = businesses
             self.tableView.reloadData()
+            ProgressHUD.dismiss()
         }
     }
     
@@ -83,7 +109,7 @@ extension BusinessesViewController: UISearchBarDelegate {
     
 }
 
-extension BusinessesViewController: UITableViewDelegate, UITableViewDataSource {
+extension BusinessesViewController: UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return businesses?.count ?? 0
     }
@@ -107,4 +133,23 @@ extension BusinessesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return CGFloat.leastNormalMagnitude
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if (!isLoadingMore) {
+            let scrollViewContentHeight = tableView.contentSize.height
+            let scrollOffsetThreshold = scrollViewContentHeight - tableView.bounds.size.height
+            
+            if(scrollView.contentOffset.y > scrollOffsetThreshold && tableView.isDragging) {
+                isLoadingMore = true
+                let frame = CGRect(x: 0, y: tableView.contentSize.height, width: tableView.bounds.size.width, height: InfiniteScrollActivityView.defaultHeight)
+                loadingMoreView?.frame = frame
+                loadingMoreView!.startAnimating()
+                
+                loadMore()
+            }
+        }
+        
+    }
+    
+    
 }

@@ -25,7 +25,6 @@ class FilterViewController: UIViewController {
         super.viewDidLoad()
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 44
-        print("init")
     }
 
     override func didReceiveMemoryWarning() {

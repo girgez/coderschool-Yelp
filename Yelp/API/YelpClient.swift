@@ -42,7 +42,7 @@ class YelpClient: BDBOAuth1RequestOperationManager {
     
     @discardableResult
     func search(with parameters: SearchParameters, completion: @escaping ([Business]?, Error?) -> Void) -> AFHTTPRequestOperation {
-        return search(with: parameters.term, sort: parameters.sortMode, categories: parameters.categories, deals: parameters.deals, distance: parameters.distance, completion: completion)
+        return search(with: parameters.term, sort: parameters.sortMode, categories: parameters.categories, deals: parameters.deals, distance: parameters.distance, offset: parameters.offset, completion: completion)
     }
     
 //    @discardableResult
@@ -51,7 +51,7 @@ class YelpClient: BDBOAuth1RequestOperationManager {
 //    }
     
     @discardableResult
-    func search(with term: String?, sort: YelpSortMode?, categories: [String]?, deals: Bool?, distance: String?, completion: @escaping ([Business]?, Error?) -> Void) -> AFHTTPRequestOperation {
+    func search(with term: String?, sort: YelpSortMode?, categories: [String]?, deals: Bool?, distance: String?, offset: Int, completion: @escaping ([Business]?, Error?) -> Void) -> AFHTTPRequestOperation {
         // For additional parameters, see http://www.yelp.com/developers/documentation/v2/search_api
         
         // Default the location to San Francisco
@@ -75,6 +75,10 @@ class YelpClient: BDBOAuth1RequestOperationManager {
         
         if distance != nil && distance != "Auto" {
             parameters["radius_filter"] = distance!.components(separatedBy: " ")[0] as AnyObject?
+        }
+        
+        if offset > 0 {
+            parameters["offset"] = offset as AnyObject
         }
         
         print("para \(parameters)")
